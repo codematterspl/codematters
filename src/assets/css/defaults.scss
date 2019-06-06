@@ -1,0 +1,13 @@
+@import '~css/variables';
+
+h1 {
+	color: $colorSecondary;
+	font-weight: 300;
+	font-size: 24px;
+}
+
+p {
+	text-align: justify;
+	color: $colorPrimary;
+	line-height: 1.5;
+}

@@ -16,7 +16,7 @@
             </router-link>
         </div>
         <div class="topbar__languages">
-            <a class="lang">PL</a>
+            <a class="lang lang--active">PL</a>
             <a class="lang">EN</a>
         </div>
     </nav>
@@ -41,6 +41,7 @@ export default {
 .topbar {
     display: flex;
     align-items: center;
+    padding-top: 16px;
 
     &__brand {
         font-size: 48px;
@@ -88,6 +89,11 @@ export default {
             padding: 0 16px;
             color: $colorPrimary;
             cursor: pointer;
+            opacity: 0.5;
+
+            &--active {
+                opacity: 1
+            }
         }
     }
 }

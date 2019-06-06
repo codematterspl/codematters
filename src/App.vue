@@ -1,15 +1,17 @@
 <template>
     <div id="app">
         <Topbar />
-        <router-view />
+        <router-view class="content" />
+        <Socials />
     </div>
 </template>
 <script>
 import Topbar from '@/components/Topbar'
-
+import Socials from '@/components/Socials'
 export default {
     components: {
-        Topbar
+        Topbar,
+        Socials
     }
 }
 </script>
@@ -17,6 +19,7 @@ export default {
 <style lang="scss">
 @import '~css/variables.scss';
 @import '~css/breakpoints.scss';
+@import '~css/defaults.scss';
 
 body {
     height: 100%;
@@ -32,11 +35,19 @@ body {
         padding: 0 8px;
 
         @include breakpoint($md) {
-            padding: 0 32px;
+            padding: 0 64px;
+
+            .content {
+                padding-top: 128px;
+            }
         }
 
         @include breakpoint($lg) {
-            padding: 0 64px;
+            padding: 0 128px;
+
+            .content {
+                padding-top: calc(128px + 64px);
+            }
         }
     }
 }
