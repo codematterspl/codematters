@@ -9,11 +9,24 @@
 export default {}
 </script>
 <style lang="scss" scoped>
+@import '~css/breakpoints';
+
 .socials {
 	display: flex;
 	position: fixed;
-	right: 48px;
-	bottom: 48px;
+
+	right: 8px;
+	bottom: 8px;
+
+	@include breakpoint($md) {
+		right: 48px;
+		bottom: 48px;
+	}
+
+	@include breakpoint($lg) {
+		right: 64px;
+		bottom: 64px;
+	}
 
 	.social {
 		margin-left: 16px;

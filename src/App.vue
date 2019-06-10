@@ -32,7 +32,7 @@ body {
     #app {
         display: flex;
         flex-direction: column;
-        padding: 0 8px;
+        padding: 0 16px;
 
         @include breakpoint($md) {
             padding: 0 64px;

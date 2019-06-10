@@ -14,7 +14,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '~css/breakpoints';
+
 .home {
-    width: 50%;
+    width: 100%;
+
+    @include breakpoint($md) {
+        width: 50%;
+    }
 }
 </style>

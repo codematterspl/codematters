@@ -7,41 +7,63 @@
         <div class="topbar__menu">
             <router-link
                 v-for="item in menu"
-                :key="item"
+                :key="item.route"
                 class="menu-item"
-                :class="{ 'menu-item--active': item === currentRoute }"
-                :to="item"
+                :class="{ 'menu-item--active': item.route === currentRoute }"
+                :to="item.route"
             >
-                {{ item }}
+                {{ item.title }}
             </router-link>
         </div>
         <div class="topbar__languages">
-            <a class="lang lang--active">PL</a>
-            <a class="lang">EN</a>
+            <a
+                class="lang"
+                :class="{ 'lang--active': locale.locale === $i18n.locale }"
+                @click="changeLanguage(locale.locale)"
+                v-for="locale in locales"
+                :key="locale.locale"
+            >
+                {{ locale.title }}
+            </a>
         </div>
     </nav>
 </template>
 <script>
 export default {
-    data() {
-        return {
-            menu: ['home', 'offer', 'contact']
-        }
-    },
     computed: {
         currentRoute() {
             return this.$route.name;
+        },
+        menu() {
+            return [{ route: 'home', title: this.$t('menu.home') },
+                    { route: 'offer', title: this.$t('menu.offer') },
+                    { route: 'contact', title: this.$t('menu.contact') }]
+        },
+        locales() {
+            return [ { locale: 'en-US', title: 'EN' }, { locale: 'pl-PL', title: 'PL' } ]
+        }
+    },
+    methods: {
+        changeLanguage(locale) {
+            this.$i18n.locale = locale
         }
     }
 }
 </script>
 <style lang="scss" scoped>
 @import '~css/variables.scss';
+@import '~css/breakpoints';
 
 .topbar {
     display: flex;
     align-items: center;
+    flex-direction: column;
     padding-top: 16px;
+
+    @include breakpoint($md) {
+        flex-direction: row;
+        align-items: center;
+    }
 
     &__brand {
         font-size: 48px;
@@ -62,8 +84,7 @@ export default {
         display: flex;
 
         .menu-item {
-            padding-left: 16px;
-            padding-right: 16px;
+            padding: 16px;
             font-size: 24px;
             font-family: Lato;
             color: $colorPrimary;
@@ -84,9 +105,14 @@ export default {
         display: flex;
         width: 150px;
         justify-content: flex-end;
+        align-self: flex-end;
+
+        @include breakpoint($md) {
+            align-self: center;
+        }
 
         .lang {
-            padding: 0 16px;
+            margin: 4px 16px;
             color: $colorPrimary;
             cursor: pointer;
             opacity: 0.5;
