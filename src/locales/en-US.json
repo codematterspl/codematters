@@ -3,5 +3,14 @@
         "home": "home",
         "offer": "offer",
         "contact": "contact"
+    },
+    "contact": {
+        "header": "Contact us",
+        "form": {
+            "email-placeholder": "your email",
+            "title-placeholder": "title",
+            "message-placeholder": "message",
+            "send": "send"
+        }
     }
 }

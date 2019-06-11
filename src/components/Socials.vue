@@ -13,19 +13,14 @@ export default {}
 
 .socials {
 	display: flex;
-	position: fixed;
-
-	right: 8px;
-	bottom: 8px;
+	justify-content: flex-end;
+	padding: 16px 0;
 
 	@include breakpoint($md) {
-		right: 48px;
-		bottom: 48px;
-	}
-
-	@include breakpoint($lg) {
-		right: 64px;
-		bottom: 64px;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		padding: 16px 64px;
 	}
 
 	.social {

@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <Topbar />
-        <router-view class="content" />
+        <transition name="fade" mode="out-in">
+            <router-view class="content" />
+        </transition>
         <Socials />
     </div>
 </template>
@@ -28,6 +30,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: Lato;
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition-duration: 0.15s;
+        transition-property: opacity;
+        transition-timing-function: ease;
+    }
+
+    .fade-enter,
+    .fade-leave-active {
+        opacity: 0
+    }
 
     #app {
         display: flex;

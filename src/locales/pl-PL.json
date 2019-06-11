@@ -3,5 +3,14 @@
         "home": "o nas",
         "offer": "oferta",
         "contact": "kontakt"
+    },
+    "contact": {
+        "header": "Napisz do nas",
+        "form": {
+            "email-placeholder": "twój email",
+            "title-placeholder": "tytuł",
+            "message-placeholder": "tekst wiadomości",
+            "send": "wyślij"
+        }
     }
 }

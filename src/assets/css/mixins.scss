@@ -1,0 +1,47 @@
+@import '~css/variables';
+
+@mixin input-label() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #d6d6d6;
+	padding-left: 4px;
+	opacity: 0;
+	transition: all .3s ease-in;
+	visibility: hidden;
+
+	&--visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@mixin input() {
+	padding: 16px 0px 8px 4px;
+	background-color: transparent;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid #fff;
+	color: $colorPrimary;
+	font-size: 16px;
+	transition: border-bottom-color 0.3s;
+	min-width: 256px;
+
+	&::placeholder {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #d6d6d6;
+		transition: all .3s ease-out;
+	}
+
+	&:focus {
+		outline: none;
+		border-bottom-color: $colorPrimaryHover;
+
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}

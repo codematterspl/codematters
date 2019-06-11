@@ -10,7 +10,7 @@
                 :key="item.route"
                 class="menu-item"
                 :class="{ 'menu-item--active': item.route === currentRoute }"
-                :to="item.route"
+                :to="{ name: item.route }"
             >
                 {{ item.title }}
             </router-link>
@@ -90,6 +90,7 @@ export default {
             color: $colorPrimary;
             text-decoration: none;
             transition: color .3s;
+            white-space: nowrap;
 
             &:hover, &:focus {
                 color: $colorPrimaryHover;

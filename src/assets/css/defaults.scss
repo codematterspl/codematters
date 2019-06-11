@@ -4,6 +4,7 @@ h1 {
 	color: $colorSecondary;
 	font-weight: 300;
 	font-size: 24px;
+	margin-bottom: 32px;
 }
 
 p {
@@ -11,3 +12,23 @@ p {
 	color: $colorPrimary;
 	line-height: 1.5;
 }
+
+section {
+	color: $colorPrimary;
+}
+
+button {
+	color: $colorSecondary;
+	text-transform: lowercase;
+	background: transparent;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all .3s;
+	padding: 8px 0;
+
+	&:hover {
+		color: $colorPrimaryHover;
+	}
+}
+
