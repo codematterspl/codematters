@@ -10,7 +10,8 @@ module.exports = {
             resolve: {
                 alias: {
                     css: path.join(__dirname, 'src/assets/css'),
-                    fonts: path.join(__dirname, 'src/assets/fonts')
+                    fonts: path.join(__dirname, 'src/assets/fonts'),
+                    images: path.join(__dirname, 'src/assets/images')
                 }
             }
         }

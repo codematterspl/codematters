@@ -12,5 +12,11 @@
             "message-placeholder": "message",
             "send": "send"
         }
+    },
+    "home": {
+        "header": "About us"
+    },
+    "offer": {
+        "header": "Offer"
     }
 }

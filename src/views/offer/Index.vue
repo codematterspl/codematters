@@ -1,6 +1,6 @@
 <template>
-    <section class="home">
-        <h1>{{ $t('home.header') }}</h1>
+    <section class="offer">
+        <h1>{{ $t('offer.header') }}</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ipsum lorem. Sed consectetur in urna vulputate scelerisque. Quisque auctor, risus et luctus suscipit, nisl nibh feugiat magna, sed vehicula tortor mauris id nulla. Sed ex libero, hendrerit malesuada risus quis, aliquet luctus libero. Cras accumsan ac est ac tincidunt. Integer porttitor ut nisi vel scelerisque. Pellentesque sed tortor eget urna condimentum luctus non eget est. Quisque dictum fringilla nisi, nec fringilla lacus commodo id. Vestibulum ut nisi vulputate, rhoncus velit id, sagittis augue.
 

@@ -20,7 +20,7 @@ export default {}
 		position: fixed;
 		bottom: 0;
 		right: 0;
-		padding: 16px 64px;
+		padding: 32px 64px;
 	}
 
 	.social {
