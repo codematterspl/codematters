@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueI18n from 'vue-i18n'
-
+import VueAnalytics from 'vue-analytics'
 import Icon from '@/components/Icon'
 
 import enUS from './locales/en-US'
@@ -10,6 +10,10 @@ import plPL from './locales/pl-PL'
 
 Vue.config.productionTip = false
 Vue.use(VueI18n)
+Vue.use(VueAnalytics, {
+    id: 'UA-142147681-1',
+    router
+})
 
 Vue.component('Icon', Icon)
 

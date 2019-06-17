@@ -100,7 +100,6 @@ body {
 
             .content {
                 padding-top: 128px;
-                width: 50%;
             }
         }
 
