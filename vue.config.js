@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -8,6 +9,11 @@ module.exports = {
                 filename: '[name].[hash].js',
                 chunkFilename: '[name].[hash].js'
             },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    template: 'public/index.html'
+                })
+            ],
             resolve: {
                 alias: {
                     css: path.join(__dirname, 'src/assets/css'),
